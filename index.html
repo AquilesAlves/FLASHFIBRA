@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/logo1.png" type="image/png">
+    <title>Calculadora de Proporcional</title>
+</head>
+<body>
+
+    <header class="header">
+        <img src="imagens/logo-flash.png" alt="Logo" class="logo">
+    </header>
+    <main>
+        <section>
+            <div class="card">
+                <!---------------------CALCULADORA DE VENCIMENTO---------------------->
+                <h1>Proporcional de Vencimento</h1>
+                <p>Dia do vencimento atual:</p>
+                <input type="number" class="input" id="vencimentoAtual" min="1" max="31">
+                <p>Dia do novo vencimento:</p>
+                <input type="number" class="input" id="vencimentoNovo" min="1" max="30">
+                <p>Valor do plano (R$):</p>
+                <input type="number" class="input" id="valorPlano">
+                <button class="botaoPrincipal" onclick="trocaVencimento()">Calcular</button>
+        
+                <div class="msg" id="msg1" ></div>
+                <button class="botaoSecundario" id="copy1" style="display:none" onclick="copiar1()">Copiar</button>
+                <div class="msg" id="msg2" ></div>
+                <button class="botaoSecundario" id="copy2" style="display:none" onclick="copiar2()">Copiar</button>
+            </div>
+                <!---------------------CALCULADORA DE TROCA DE PLANO---------------------->
+            <div class="card">
+                <h1>Proporcional de Plano</h1>
+                <p>Digite o valor do plano antigo:</p>
+                <input type="number" class="input" id="valorAntigo">
+                <p>Digite o valor do plano novo:</p>
+                <input type="number" class="input" id="valorNovo">
+                <p>Digite o dia do vencimento:</p>
+                <input type="number" class="input" id="vencimento" min="1" max="31">
+        
+                <p>Digite o dia da Troca:</p>
+                <input type="number" class="input" id="dataTroca" min="1" max="31">
+                <button class="botaoPrincipal" onclick="trocaPlano()">Calcular</button>
+        
+                <div class="msg" id="msg3" ></div>
+                <button class="botaoSecundario" id="copy3" style="display:none" onclick="copiar3()">Copiar</button>
+                <div class="msg" id="msg4"></div>
+                <button class="botaoSecundario" id="copy4" style="display:none" onclick="copiar4()">Copiar</button>
+            </div>
+                <!-----------------------CALCULADORA DE DESCONTO--------------------------->
+            <div class="card">
+                <h1>Desconto ou Cancelamento</h1>
+                <p>Digite os dias proporcionais:</p>
+                <input type="number" class="input" id="diasProporcionais" min="1">
+                <p>Digite o valor do plano (R$):</p>
+                <input type="number" class="input" id="valorDoPlano">
+                <button class="botaoPrincipal" onclick="proporcional()">Calcular</button>
+
+                <p style="display: none" id="texto1">Mensagem para Desconto:</p>
+                <div class="msg" id="msg5"></div>
+                <button class="botaoSecundario" id="copy5" style="display:none" onclick="copiar5()">Copiar</button>
+
+                <p style="display: none" id="texto2">Mensagem para Cancelamento:</p>
+                <div class="msg" id="msg6"></div>
+                <button class="botaoSecundario" id="copy6" style="display:none" onclick="copiar6()">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            © 2025
+            <a target="_blank" href="https://github.com/AquilesAlves">Aquiles Alves Pereira</a>,
+            <a target="_blank" href="https://github.com/Joather">Joaquim 'Joather' Ferreira</a>,
+            <a href="#">Vitor Stewart Glennon</a>.
+            Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
